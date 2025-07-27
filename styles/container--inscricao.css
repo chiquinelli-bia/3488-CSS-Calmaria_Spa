@@ -3,13 +3,13 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  row-gap: 24px;
-  padding: 40px 16px;
+  row-gap: 2.4rem;
+  padding: 4rem 1.6rem;
 }
 
 .container__incricao--mobile {
-  width: 182px;
-  height: 103px;
+  width: 18.2rem;
+  height: 10.3rem;
 }
 
 .container__incricao--tablet {
@@ -19,18 +19,18 @@
 .container__incricao .container__incricao--div {
   display: flex;
   flex-direction: column;
-  row-gap: 24px;
-  max-width: 1102px;
+  row-gap: 2.4rem;
+  max-width: 110.2rem;
 }
 
 .container__incricao--form-input {
-  width: 328px;
-  height: 65px;
-  border-radius: 65px;
+  width: 32.8rem;
+  height: 6.5rem;
+  border-radius: 6.5rem;
   border: 1px solid var(--azul-escuro);
   margin: 0 auto;
   display: inline-flex;
-  row-gap: 24px;
+  row-gap: 2.4rem;
 }
 
 .container__incricao--form-input input {
@@ -39,7 +39,7 @@
   width: 65%;
   margin-left: 3.2rem;
   font-family: "Montserrat", sans-serif;
-  font-size: 22px;
+  font-size: 2.2rem;
   color: #0c0421;
 }
 
@@ -47,9 +47,9 @@
   width: 35%;
   color: white;
   background: var(--azul-escuro);
-  border-radius: 0 65px 65px 0;
+  border-radius: 0 6.5rem 6.5rem 0;
   border: none;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-family: "Montserrat";
   cursor: pointer;
 }
@@ -60,8 +60,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  /* Seção inscrição */
-
   .container__incricao {
     display: flex;
     text-align: center;
@@ -76,17 +74,17 @@
   }
 
   .container__incricao .container__incricao--form-titulo {
-    font-size: 31px;
+    font-size: 3.1rem;
     font-family: Krona One;
     font-weight: 400;
   }
 
   .container__incricao--form-texto {
-    font-size: 22px;
+    font-size: 2.2rem;
   }
 
   .container__incricao--form-input {
-    width: 368px;
+    width: 36.8rem;
   }
 
   .container__incricao--tablet {
@@ -94,12 +92,10 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
-  /* Seção inscrição */
-
+@media screen and (min-width: 1340px) {
   .container__incricao--form-input {
-    width: 790px;
-    height: 65px;
-    row-gap: 24px;
+    width: 79rem;
+    height: 6.5rem;
+    row-gap: 2.4rem;
   }
 }

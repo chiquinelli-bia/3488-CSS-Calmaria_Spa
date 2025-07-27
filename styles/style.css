@@ -24,9 +24,9 @@
 
 html {
   scroll-behavior: smooth;
-  *:focus {
-    outline-offset: 3px;
-  }
+}
+html *:focus {
+  outline-offset: 3px;
 }
 
 ul {
@@ -39,8 +39,6 @@ body {
   font-family: var(--fonte);
 }
 
-/* Header */
-
 .cabecalho {
   background: var(--verde-claro);
 }
@@ -49,18 +47,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 16px;
-  padding: 40px 120px;
+  row-gap: 1.6rem;
+  padding: 4rem 12rem;
   white-space: nowrap;
 }
 
 .cabecalho__nav--logo {
-  width: 172px;
-  height: 56px;
+  width: 17.2rem;
+  height: 5.6rem;
 }
 
 .cabecalho__nav--lista {
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 
 .cabecalho .cabecalho__nav .cabecalho__nav--line {
@@ -80,7 +78,7 @@ body {
   text-decoration: none;
   font-weight: 400;
   line-height: 150%;
-  margin: 5px;
+  margin: 0.5rem;
 }
 
 .cabecalho__lista-item {
@@ -95,11 +93,10 @@ body {
   transition: transform 0.5s ease;
   cursor: pointer;
   color: var(--lilas-escuro);
-  font-size: 22px;
+  font-size: 2.2rem;
   align-self: center;
 }
 
-/* seta submenu */
 .cabecalho__lista-item .icone.active {
   transform: rotate(180deg);
 }
@@ -109,17 +106,17 @@ body {
   position: absolute;
   border: 1px solid #ddd;
   font-size: 1rem;
-  padding: 16px;
+  padding: 1.6rem;
   border-top: none;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
   background: var(--cinza-claro);
-  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1);
   z-index: 1;
-  min-width: 160px;
-  border-radius: 4px;
-  margin-top: 40px;
-  font-size: 22px;
+  min-width: 16rem;
+  border-radius: 0.4rem;
+  margin-top: 4rem;
+  font-size: 2.2rem;
 }
 
 .cabecalho__nav--lista .submenu .submenu {
@@ -133,11 +130,10 @@ body {
   align-items: center;
   align-content: center;
   text-align: center;
-  display: flex;
-  border-bottom: 2px solid #cad4fa;
-  margin: 8px 8px;
-  min-width: 170px;
-  height: 45px;
+  border-bottom: 2px solid var(--lilas);
+  margin: 0.8rem 0.8rem;
+  min-width: 17rem;
+  height: 4.5rem;
 }
 
 .submenu li:first-child {
@@ -150,38 +146,32 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  /* Tablet */
-
   .cabecalho__nav--logo {
-    width: 270px;
-    height: 88px;
+    width: 27rem;
+    height: 8.8rem;
   }
 
   .cabecalho__nav--lista {
-    font-size: 22px;
+    font-size: 2.2rem;
     cursor: pointer;
   }
 }
 
-/* 
- * Accordion 
- */
 .acordeao {
   width: 100%;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
-/* Estilo base do acordeão */
 .acordeao-item {
   background-color: var(--azul-escuro);
   color: white;
   cursor: pointer;
   border: none;
-  padding: 16px;
+  padding: 1.6rem;
   transition: background-color 0.5s ease;
-  border-radius: 32px;
-  margin-bottom: 8px;
+  border-radius: 3.2rem;
+  margin-bottom: 0.8rem;
   overflow: hidden;
 }
 
@@ -196,11 +186,8 @@ body {
   justify-content: space-between;
   display: flex;
   cursor: pointer;
-}
-
-.botao-acordeao {
-  font-size: 15px;
-  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
 }
 
 .acordeao-item:hover {
@@ -208,61 +195,55 @@ body {
   transition: 0.5s;
 }
 
-/* Estilo do conteúdo do acordeão */
 .conteudo-acordeao {
   max-height: 0;
   overflow: hidden;
   position: relative;
   color: #000;
-  left: -16px;
-  bottom: -16px;
+  left: -1.6rem;
+  bottom: -1.6rem;
   width: 112%;
   background-color: var(--cinza-claro);
-  padding: 0 18px;
+  padding: 0 1.8rem;
   transition: max-height 0.5s ease;
-  border-bottom-left-radius: 32px;
-  border-bottom-right-radius: 32px;
+  border-bottom-left-radius: 3.2rem;
+  border-bottom-right-radius: 3.2rem;
   z-index: 0;
 }
 
 .conteudo-acordeao div {
-  padding: 16px;
+  padding: 1.6rem;
   width: 95%;
-}
-
-.conteudo-acordeao div {
   font-size: 1.5rem;
 }
 
-/* Estilo para a transição do ícone */
 .icone {
   transition: transform 0.5s ease;
   cursor: pointer;
-  font-size: 32px;
+  font-size: 3.2rem;
   outline: none;
 }
 
-/* seta acordeão */
 .botao-acordeao[aria-expanded="true"] .icone {
   transform: rotate(180deg);
 }
 
 .conteudo-acordeao.expandido {
-  max-height: 250px;
+  max-height: 25rem;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1340px) {
   .cabecalho .cabecalho__nav {
     flex-direction: column;
   }
 
   .botao-acordeao {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
   }
 
   .cabecalho .cabecalho__nav .cabecalho__nav--lista {
-    gap: 40px;
+    gap: 4rem;
   }
 
   .conteudo-acordeao div {

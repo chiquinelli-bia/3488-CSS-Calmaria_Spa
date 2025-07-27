@@ -3,6 +3,7 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 3rem 0;
   flex-wrap: wrap;
 }
@@ -11,25 +12,25 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 8px;
+  gap: 0.8rem;
   max-width: 100%;
-  width: 1200px;
+  width: 120rem;
 }
 
 .textos {
   background: linear-gradient(180deg, #e8f5c8 0%, rgb(255, 255, 255) 96%);
   padding: 2rem;
-  margin-top: 16px;
-  border-radius: 34px;
+  margin-top: 1.6rem;
+  border-radius: 3.4rem;
   max-width: 100%;
-  width: 1200px;
+  width: 120rem;
   display: grid;
   justify-content: center;
 }
 
 .textos .titulo {
   font-family: "Krona One", sans-serif;
-  font-size: 26px;
+  font-size: 2.6rem;
   color: var(--azul-escuro);
   display: flex;
   justify-content: center;
@@ -37,7 +38,7 @@
 
 .textos .infos {
   font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+  font-size: 2rem;
   color: #0c0421;
   line-height: 2rem;
   margin: 2rem 0;
@@ -45,12 +46,12 @@
 
 .textos .btn-contato {
   width: 90%;
-  height: 45px;
+  height: 4.5rem;
   border: none;
-  border-radius: 25px;
+  border-radius: 2.5rem;
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.6rem;
   background: var(--azul-escuro);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -61,9 +62,8 @@
   transition: 0.5s;
 }
 
-/* Modal do formulário de contato */
 .modal {
-  background-color: rgb(93, 88, 108, 0.8);
+  background-color: rgba(93, 88, 108, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -76,14 +76,14 @@
 .conteudo-modal {
   margin: 0 auto;
   margin-top: 1%;
-  max-width: 800px;
+  max-width: 80rem;
   background: linear-gradient(180deg, #e8f5c8 0%, rgb(255, 255, 255) 96%);
-  padding: 30px 24px;
-  border-radius: 8px;
+  padding: 3rem 2.4rem;
+  border-radius: 0.8rem;
 }
 
 .cabecalho-modal {
-  padding: 1px;
+  padding: 0.1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,29 +92,23 @@
 
 .cabecalho-modal .cabecalho-titulo-modal {
   font-family: "Krona One", sans-serif;
-  font-size: 26px;
+  font-size: 2.6rem;
   color: var(--azul-escuro);
-  margin: 10px 0;
+  margin: 1rem 0;
 }
 
 .cabecalho-modal .cabecalho-modal-fechar {
   border: solid 1px;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
 }
 
-.cabecalho-modal .cabecalho-modal-fechar:hover {
-  background: red;
-  color: white;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
+.cabecalho-modal .cabecalho-modal-fechar:hover,
 .cabecalho-modal-fechar:focus {
   background: red;
   color: white;
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
 }
 
@@ -124,33 +118,33 @@
 }
 
 .inputs-modal .paragrafo-modal {
-  margin: 10px 0;
+  margin: 1rem 0;
   color: #0c0421;
   font-size: 1.5rem;
 }
 
 .inputs-modal label {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #0c0421;
   font-weight: bold;
 }
 
 .inputs-modal input,
 .inputs-modal textarea {
-  border-radius: 25px;
+  border-radius: 2.5rem;
   padding: 1rem;
   border: none;
 }
 
 .inputs-modal textarea {
-  height: 70px;
+  height: 7rem;
 }
 
 .inputs-modal-radio {
   display: flex;
-  margin: 8px 16px;
-  gap: 32px;
+  margin: 0.8rem 1.6rem;
+  gap: 3.2rem;
 }
 
 .field-legend {
@@ -170,18 +164,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 105px;
+  margin: 1rem 10.5rem;
 }
 
 .btn-enviar {
   font-family: "Montserrat", sans-serif;
   width: 80%;
   border: none;
-  border-radius: 40px;
-  height: 45px;
+  border-radius: 4rem;
+  height: 4.5rem;
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.6rem;
   background: var(--azul-escuro);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -192,10 +186,8 @@
   transition: 0.5s;
 }
 
-/* Modal de formulário enviado */
-
 .modal-enviado {
-  background-color: rgb(93, 88, 108, 0.8);
+  background-color: rgba(93, 88, 108, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -207,14 +199,14 @@
 .conteudo-modal-enviado {
   margin: 0 auto;
   margin-top: 10%;
-  max-width: 800px;
+  max-width: 80rem;
   background: linear-gradient(180deg, #e8f5c8 0%, rgb(255, 255, 255) 96%);
-  padding: 40px 48px;
-  border-radius: 8px;
+  padding: 4rem 4.8rem;
+  border-radius: 0.8rem;
 }
 
 .cabecalho-modal-enviado {
-  padding: 1px;
+  padding: 0.1rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -222,25 +214,25 @@
 
 .cabecalho-modal-enviado .cabecalho-titulo-modal-enviado {
   font-family: "Krona One", sans-serif;
-  font-size: 26px;
+  font-size: 2.6rem;
   color: var(--azul-escuro);
-  margin: 10px 0;
+  margin: 1rem 0;
 }
 
 .cabecalho-icone-modal-enviado {
-  width: 68x;
-  margin: 20px 0;
+  width: 68px;
+  margin: 2rem 0;
 }
 
 .btn-fechar {
   font-family: "Montserrat", sans-serif;
   width: 40%;
   border: none;
-  border-radius: 40px;
-  height: 45px;
+  border-radius: 4rem;
+  height: 4.5rem;
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.6rem;
   background: var(--azul-escuro);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -251,17 +243,15 @@
   transition: 0.5s;
 }
 
-/* Modal dialog popup */
-
 .modal-popup {
   display: none;
   margin: auto;
   background: linear-gradient(180deg, #e8f5c8 0%, rgb(255, 255, 255) 96%);
-  padding: 0 48px;
-  border-radius: 8px;
+  padding: 0 4.8rem;
+  border-radius: 0.8rem;
   max-width: 80%;
-  width: 793px;
-  height: 417px;
+  width: 79.3rem;
+  height: 41.7rem;
   z-index: 1;
 }
 
@@ -271,24 +261,24 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 54px;
+  padding: 0 5.4rem;
 }
 
 .modal-popup-conteudo img {
   transform: rotate(90deg);
-  width: 114px;
-  height: 200px;
+  width: 11.4rem;
+  height: 20rem;
 }
 
 .modal-popup-conteudo-cabecalho {
   font-family: "Krona One", sans-serif;
-  font-size: 26px;
+  font-size: 2.6rem;
   font-weight: 400;
-  margin: 0 0 10px 0;
+  margin: 0 0 1rem 0;
 }
 
 .modal-popup-conteudo-cadastro {
-  margin-top: 16px;
+  margin-top: 1.6rem;
 }
 
 .modal-popup-conteudo-cadastro-btn {
@@ -298,22 +288,22 @@
 
 .modal-popup-conteudo-cadastro-btn input {
   flex: 1;
-  border-top-left-radius: 32px;
-  border-bottom-left-radius: 32px;
+  border-top-left-radius: 3.2rem;
+  border-bottom-left-radius: 3.2rem;
   border: 1px solid #4e75ff;
-  padding: 10px 64px;
+  padding: 10px 6.4rem;
   border-right: none;
 }
 
 .modal-popup-conteudo-cadastro-btn button {
-  border-top-right-radius: 32px;
-  border-bottom-right-radius: 32px;
+  border-top-right-radius: 3.2rem;
+  border-bottom-right-radius: 3.2rem;
   border: none;
-  padding: 10px 64px;
+  padding: 10px 6.4rem;
   background-color: var(--azul-escuro);
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 
@@ -323,13 +313,11 @@
 }
 
 dialog::backdrop {
-  background-color: rgb(93, 88, 108, 0.8);
+  background-color: rgba(93, 88, 108, 0.8);
 }
 
-/* Modal inscrito */
-
 .modal-inscrito {
-  background-color: rgb(93, 88, 108, 0.8);
+  background-color: rgba(93, 88, 108, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -341,14 +329,14 @@ dialog::backdrop {
 .conteudo-modal-inscrito {
   margin: 0 auto;
   margin-top: 10%;
-  max-width: 800px;
+  max-width: 80rem;
   background: linear-gradient(180deg, #e8f5c8 0%, rgb(255, 255, 255) 96%);
-  padding: 40px 48px;
-  border-radius: 8px;
+  padding: 4rem 4.8rem;
+  border-radius: 0.8rem;
 }
 
 .cabecalho-modal-inscrito {
-  padding: 1px;
+  padding: 0.1rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -356,25 +344,31 @@ dialog::backdrop {
 
 .cabecalho-modal-inscrito .cabecalho-titulo-modal-inscrito {
   font-family: "Krona One", sans-serif;
-  font-size: 26px;
+  font-size: 2.6rem;
   color: var(--azul-escuro);
-  margin: 10px 0;
+  margin: 1rem 0;
 }
 
 .cabecalho-icone-modal-inscrito {
-  width: 68x;
-  margin: 20px 0;
+  width: 68px;
+  margin: 2rem 0;
 }
-
-/* Footer */
 
 footer {
   background: #e8f5c8;
   padding: 2rem;
   text-align: center;
-  font-size: 15px;
+  font-size: 1.5rem;
 }
-
+@media screen and (min-width: 750px) {
+  .imgs-contato {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .imgs-contato:first-child {
+    width: min-content;
+  }
+}
 @media screen and (min-width: 1440px) {
   .container__primeiro--imagem {
     align-self: end;
@@ -392,10 +386,10 @@ footer {
   .conteudo-modal {
     margin: 0 auto;
     margin-top: 3%;
-    max-width: 800px;
+    max-width: 80rem;
     background: linear-gradient(180deg, #e8f5c8 0%, rgb(255, 255, 255) 96%);
-    padding: 40px 48px;
-    border-radius: 8px;
+    padding: 4rem 4.8rem;
+    border-radius: 0.8rem;
   }
 
   .inputs-modal .paragrafo-modal {
