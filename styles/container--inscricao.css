@@ -3,42 +3,34 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  row-gap: 2.4rem;
-  padding: 4rem 1.6rem;
+  row-gap: 24px;
+  padding: 40px 16px;
 }
 
 .container__incricao--mobile {
-  width: 18.2rem;
-  height: 10.3rem;
+  width: 182px;
+  height: 103px;
 }
 
 .container__incricao--tablet {
   display: none;
 }
 
-.container__incricao .container__incricao--form-titulo {
-  font-size: 2.6rem;
-}
-
-.container__incricao .container__incricao--form-texto {
-  font-size: 2.2rem;
-}
-
 .container__incricao .container__incricao--div {
   display: flex;
   flex-direction: column;
-  row-gap: 2.4rem;
-  max-width: 110.2rem;
+  row-gap: 24px;
+  max-width: 1102px;
 }
 
 .container__incricao--form-input {
-  width: 32.8rem;
-  height: 6.5rem;
-  border-radius: 6.5rem;
-  border: 0.1rem solid var(--azul-escuro);
+  width: 328px;
+  height: 65px;
+  border-radius: 65px;
+  border: 1px solid var(--azul-escuro);
   margin: 0 auto;
   display: inline-flex;
-  row-gap: 2.4rem;
+  row-gap: 24px;
 }
 
 .container__incricao--form-input input {
@@ -47,7 +39,7 @@
   width: 65%;
   margin-left: 3.2rem;
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 22px;
   color: #0c0421;
 }
 
@@ -55,14 +47,16 @@
   width: 35%;
   color: white;
   background: var(--azul-escuro);
-  border-radius: 0 6.5rem 6.5rem 0;
+  border-radius: 0 65px 65px 0;
   border: none;
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 18px;
   font-family: "Montserrat";
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  cursor: pointer;
+}
+
+.container__incricao--form-input button:hover {
+  background: var(--lilas-claro);
+  transition: 0.5s;
 }
 
 @media screen and (min-width: 768px) {
@@ -82,17 +76,17 @@
   }
 
   .container__incricao .container__incricao--form-titulo {
-    font-size: 3.1rem;
+    font-size: 31px;
     font-family: Krona One;
     font-weight: 400;
   }
 
   .container__incricao--form-texto {
-    font-size: 1.3rem;
+    font-size: 22px;
   }
 
   .container__incricao--form-input {
-    width: 36.8rem;
+    width: 368px;
   }
 
   .container__incricao--tablet {
@@ -104,8 +98,8 @@
   /* Seção inscrição */
 
   .container__incricao--form-input {
-    width: 79rem;
-    height: 6.5rem;
-    row-gap: 2.4rem;
+    width: 790px;
+    height: 65px;
+    row-gap: 24px;
   }
 }

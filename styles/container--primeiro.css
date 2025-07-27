@@ -1,25 +1,24 @@
-/* container */
-
 .container {
   background: var(--gradiente);
 }
 
 .container__primeiro {
-  padding: 6.4rem 1.6rem;
+  padding: 64px 16px;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  row-gap: 2.4rem;
+  row-gap: 1.5rem;
 }
 
 .container__primeiro--texto h1 {
   font-family: Krona One;
-  font-size: 3.1rem;
+  font-size: 31px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-  padding-bottom: 3.2rem;
+  padding-bottom: 2rem;
 }
 
 .container__primeiro--texto h1 span {
@@ -45,9 +44,9 @@
 }
 
 .container__primeiro--imagem {
-  width: 29.7rem;
-  height: 38.4rem;
-  align-self: end;
+  width: 297px;
+  height: 384px;
+  align-self: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -55,25 +54,25 @@
 
   .container__primeiro {
     align-items: center;
-    text-align: center;
-    padding: 6.4rem 6rem;
+    text-align: start;
+    padding: 64px 60px;
   }
 
   .container__primeiro--texto {
-    width: 48.6rem;
+    width: 486px;
   }
 
   .container__primeiro--texto h1 {
-    font-size: 4.2rem;
+    font-size: 42px;
   }
 
   .container__primeiro--texto-botao {
-    width: 28rem;
+    width: 280px;
   }
 
   .container__primeiro--imagem {
-    width: 43.2rem;
-    height: 55.8rem;
+    width: 432px;
+    height: 558px;
     align-self: center;
   }
 }
