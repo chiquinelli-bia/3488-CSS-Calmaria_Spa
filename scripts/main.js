@@ -1,3 +1,13 @@
+function alternarModal(modalId, value) {
+  const modal = document.querySelector(`#${modalId}`);
+  if (value) {
+    modal.style.display = "block";
+  } else {
+    modal.style.display = "none";
+  }
+  document.body.style.overflow = value ? "hidden" : "auto";
+}
+
 function alternarSubmenu(item, mostrar) {
   const subMenu = item.querySelector(".submenu");
   if (subMenu) {
