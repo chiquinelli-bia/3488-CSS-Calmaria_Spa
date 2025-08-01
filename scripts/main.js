@@ -37,3 +37,11 @@ document.querySelectorAll(".cabecalho__lista-item").forEach((item) => {
     alternarSubmenu(item, !isDisplayed);
   });
 });
+
+document.querySelectorAll(".botao-acordeao").forEach((button) => {
+  button.addEventListener("click", () => alternarAcordeao(button));
+});
+function alternarAcordeao(button) {
+  const content = button.nextElementSibling;
+  content.classList.add("expandido");
+}
