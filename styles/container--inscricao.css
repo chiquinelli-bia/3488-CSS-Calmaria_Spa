@@ -43,7 +43,7 @@
   color: #0c0421;
 }
 
-.button__incricao {
+.container__incricao--form-input button {
   width: 35%;
   color: white;
   background: var(--azul-escuro);
@@ -54,7 +54,7 @@
   cursor: pointer;
 }
 
-.button__incricao:hover {
+.container__incricao--form-input button:hover {
   background: var(--lilas-claro);
   transition: 0.5s;
 }
