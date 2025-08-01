@@ -8,6 +8,12 @@ function alternarModal(modalId, value) {
   document.body.style.overflow = value ? "hidden" : "auto";
 }
 
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    alternarModal("ver-modal-inscrito", false);
+  }
+});
+
 function alternarSubmenu(item, mostrar) {
   const subMenu = item.querySelector(".submenu");
   if (subMenu) {
