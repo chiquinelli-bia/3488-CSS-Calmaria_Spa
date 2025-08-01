@@ -11,6 +11,9 @@ function alternarModal(modalId, value) {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     alternarModal("ver-modal-inscrito", false);
+    document.querySelectorAll(".cabecalho__lista-item").forEach((item) => {
+      alternarSubmenu(item, false);
+    });
   }
 });
 
