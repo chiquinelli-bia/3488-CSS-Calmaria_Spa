@@ -42,6 +42,11 @@ document.querySelectorAll(".botao-acordeao").forEach((button) => {
   button.addEventListener("click", () => alternarAcordeao(button));
 });
 function alternarAcordeao(button) {
-  const content = button.nextElementSibling;
-  content.classList.add("expandido");
+  const valueButton = button.getAttribute("aria-expanded") === true;
+  if (!valueButton) {
+    const content = button.nextElementSibling;
+    content.classList.add("expandido");
+    button.setAttribute("aria-expanded", true);
+    content.setAttribute("aria-hidden", false);
+  }
 }
