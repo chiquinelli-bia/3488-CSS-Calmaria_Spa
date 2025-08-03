@@ -41,12 +41,18 @@ document.querySelectorAll(".cabecalho__lista-item").forEach((item) => {
 document.querySelectorAll(".botao-acordeao").forEach((button) => {
   button.addEventListener("click", () => alternarAcordeao(button));
 });
-function alternarAcordeao(button) {
-  const valueButton = button.getAttribute("aria-expanded") === true;
-  if (!valueButton) {
+function alternarAcordeao(buttonClicado) {
+  const valueButton = buttonClicado.getAttribute("aria-expanded") === "true";
+  const contentClicado = buttonClicado.nextElementSibling;
+  document.querySelectorAll(".botao-acordeao").forEach((button) => {
     const content = button.nextElementSibling;
-    content.classList.add("expandido");
-    button.setAttribute("aria-expanded", true);
-    content.setAttribute("aria-hidden", false);
+    content.classList.remove("expandido");
+    button.setAttribute("aria-expanded", false);
+    content.setAttribute("aria-hidden", true);
+  });
+  if (!valueButton) {
+    contentClicado.classList.add("expandido");
+    buttonClicado.setAttribute("aria-expanded", true);
+    contentClicado.setAttribute("aria-hidden", false);
   }
 }
