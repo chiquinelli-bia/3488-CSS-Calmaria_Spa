@@ -1,3 +1,5 @@
+let ultElementFocado;
+
 function gerenciarFocoModal(modalId) {
   const modal = document.querySelector(`#${modalId}`);
   const elementosModal = modal.querySelectorAll(
@@ -27,9 +29,13 @@ function gerenciarFocoModal(modalId) {
 function alternarModal(modalId, value) {
   const modal = document.querySelector(`#${modalId}`);
   if (value) {
+    ultElementFocado = document.activeElement;
     modal.style.display = "block";
     gerenciarFocoModal(modalId);
   } else {
+    if (ultElementFocado) {
+      ultElementFocado.focus();
+    }
     modal.style.display = "none";
   }
   document.body.style.overflow = value ? "hidden" : "auto";
