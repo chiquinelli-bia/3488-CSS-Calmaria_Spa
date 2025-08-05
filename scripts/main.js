@@ -6,6 +6,23 @@ function gerenciarFocoModal(modalId) {
   const primeiroElemento = elementosModal[0];
   const ultimoElemento = elementosModal[elementosModal.length - 1];
   primeiroElemento.focus();
+
+  modal.addEventListener("keydown", (event) => {
+    if (event.key === "Tab" && event.shiftKey) {
+      if (document.activeElement === primeiroElemento) {
+        event.preventDefault();
+        ultimoElemento.focus();
+      }
+    } else {
+      if (
+        document.activeElement === ultimoElemento ||
+        !modal.contains(document.activeElement)
+      ) {
+        event.preventDefault();
+        primeiroElemento.focus();
+      }
+    }
+  });
 }
 function alternarModal(modalId, value) {
   const modal = document.querySelector(`#${modalId}`);
