@@ -7,38 +7,41 @@ function gerenciarFocoModal(modalId) {
   );
   const primeiroElemento = elementosModal[0];
   const ultimoElemento = elementosModal[elementosModal.length - 1];
+
   primeiroElemento.focus();
 
   modal.addEventListener("keydown", (event) => {
-    if (event.key === "Tab" && event.shiftKey) {
-      if (document.activeElement === primeiroElemento) {
-        event.preventDefault();
-        ultimoElemento.focus();
-      }
-    } else {
-      if (
-        document.activeElement === ultimoElemento ||
-        !modal.contains(document.activeElement)
-      ) {
-        event.preventDefault();
-        primeiroElemento.focus();
+    if (event.key === "Tab") {
+      if (event.shiftKey) {
+        if (document.activeElement === primeiroElemento) {
+          event.preventDefault();
+          ultimoElemento.focus();
+        }
+      } else {
+        if (document.activeElement === ultimoElemento) {
+          event.preventDefault();
+          primeiroElemento.focus();
+        }
       }
     }
   });
 }
-function alternarModal(modalId, value) {
+
+function alternarModal(modalId, abrir) {
   const modal = document.querySelector(`#${modalId}`);
-  if (value) {
+
+  if (abrir) {
     ultElementFocado = document.activeElement;
     modal.style.display = "block";
     gerenciarFocoModal(modalId);
   } else {
+    modal.style.display = "none";
     if (ultElementFocado) {
       ultElementFocado.focus();
     }
-    modal.style.display = "none";
   }
-  document.body.style.overflow = value ? "hidden" : "auto";
+
+  document.body.style.overflow = abrir ? "hidden" : "auto";
 }
 
 document.addEventListener("keydown", (event) => {
@@ -76,6 +79,7 @@ document.querySelectorAll(".cabecalho__lista-item").forEach((item) => {
 document.querySelectorAll(".botao-acordeao").forEach((button) => {
   button.addEventListener("click", () => alternarAcordeao(button));
 });
+
 function alternarAcordeao(buttonClicado) {
   const valueButton = buttonClicado.getAttribute("aria-expanded") === "true";
   const contentClicado = buttonClicado.nextElementSibling;
