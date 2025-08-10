@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/cabecalho.css" />
     <link rel="stylesheet" href="./styles/container--primeiro.css" />
     <link rel="stylesheet" href="./styles/container--secao.css" />
     <link rel="stylesheet" href="./styles/container--cards.css" />
@@ -193,10 +192,7 @@
           </p>
           <div class="container__incricao--form-input">
             <input id="inscricao" type="email" placeholder="Digite seu email" />
-            <button
-              onclick="alternarModal('ver-modal-inscrito', true)"
-              type="submit"
-            >
+            <button data-modal="ver-modal-inscrito" type="submit">
               Inscrever
             </button>
           </div>
@@ -224,7 +220,7 @@
               />
               <button
                 class="btn-fechar"
-                onclick="alternarModal('ver-modal-inscrito', false)"
+                data-close-modal="ver-modal-inscrito"
                 tabindex="0"
                 aria-label="Fechar formulário enviado"
               >
@@ -261,7 +257,7 @@
         </p>
         <button
           class="btn-contato"
-          onclick="alternarModal('ver-modal-contato', true)"
+          data-modal="ver-modal-contato"
           aria-label="Clique para Entrar em contato"
         >
           Entrar em contato
@@ -282,7 +278,7 @@
             </h2>
             <button
               class="cabecalho-modal-fechar"
-              onclick="alternarModal('ver-modal-contato', false)"
+              data-close-modal="ver-modal-contato"
               aria-label="Botão para fechar o formulário"
               tabindex="0"
             >
@@ -396,7 +392,8 @@
           <div class="rodape-modal">
             <button
               class="btn-enviar"
-              onclick="alternarModal('ver-modal-contato', false), alternarModal('ver-modal-enviado', true)"
+              data-close-modal="ver-modal-contato"
+              data-modal="ver-modal-enviado"
               tabindex="0"
             >
               Enviar
@@ -427,7 +424,7 @@
             />
             <button
               class="btn-fechar"
-              onclick="alternarModal('ver-modal-enviado', false)"
+              data-close-modal="ver-modal-enviado"
               tabindex="0"
               aria-label="Fechar formulário enviado"
             >
@@ -527,5 +524,5 @@
       </address>
     </footer>
   </body>
-  <script src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/main.js"></script>
 </html>
