@@ -1,48 +1,19 @@
-let ultElementFocado;
+import alternarModal from "./modal.js";
+import alternarSubmenu from "./submenu.js";
+import alternarAcordeao from "./acordeao.js";
 
-function gerenciarFocoModal(modalId) {
-  const modal = document.querySelector(`#${modalId}`);
-  const elementosModal = modal.querySelectorAll(
-    'a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
-  const primeiroElemento = elementosModal[0];
-  const ultimoElemento = elementosModal[elementosModal.length - 1];
-
-  primeiroElemento.focus();
-
-  modal.addEventListener("keydown", (event) => {
-    if (event.key === "Tab") {
-      if (event.shiftKey) {
-        if (document.activeElement === primeiroElemento) {
-          event.preventDefault();
-          ultimoElemento.focus();
-        }
-      } else {
-        if (document.activeElement === ultimoElemento) {
-          event.preventDefault();
-          primeiroElemento.focus();
-        }
-      }
-    }
+document.querySelectorAll("button[data-modal]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const modalId = button.getAttribute("data-modal");
+    alternarModal(modalId, true);
   });
-}
-
-function alternarModal(modalId, abrir) {
-  const modal = document.querySelector(`#${modalId}`);
-
-  if (abrir) {
-    ultElementFocado = document.activeElement;
-    modal.style.display = "block";
-    gerenciarFocoModal(modalId);
-  } else {
-    modal.style.display = "none";
-    if (ultElementFocado) {
-      ultElementFocado.focus();
-    }
-  }
-
-  document.body.style.overflow = abrir ? "hidden" : "auto";
-}
+});
+document.querySelectorAll("[data-close-modal]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const modalId = button.getAttribute("data-close-modal");
+    alternarModal(modalId, false);
+  });
+});
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
@@ -54,17 +25,6 @@ document.addEventListener("keydown", (event) => {
     });
   }
 });
-
-function alternarSubmenu(item, mostrar) {
-  const subMenu = item.querySelector(".submenu");
-  if (subMenu) {
-    subMenu.style.display = mostrar ? "block" : "none";
-    const menuItem = item.querySelector(".cabecalho__lista-item a");
-    menuItem.setAttribute("aria-expanded", mostrar ? true : false);
-    const SubMenuIcon = item.querySelector(".material-symbols-outlined");
-    SubMenuIcon.classList.toggle("active", mostrar);
-  }
-}
 
 document.querySelectorAll(".cabecalho__lista-item").forEach((item) => {
   item.addEventListener("mouseover", () => alternarSubmenu(item, true));
@@ -79,19 +39,3 @@ document.querySelectorAll(".cabecalho__lista-item").forEach((item) => {
 document.querySelectorAll(".botao-acordeao").forEach((button) => {
   button.addEventListener("click", () => alternarAcordeao(button));
 });
-
-function alternarAcordeao(buttonClicado) {
-  const valueButton = buttonClicado.getAttribute("aria-expanded") === "true";
-  const contentClicado = buttonClicado.nextElementSibling;
-  document.querySelectorAll(".botao-acordeao").forEach((button) => {
-    const content = button.nextElementSibling;
-    content.classList.remove("expandido");
-    button.setAttribute("aria-expanded", false);
-    content.setAttribute("aria-hidden", true);
-  });
-  if (!valueButton) {
-    contentClicado.classList.add("expandido");
-    buttonClicado.setAttribute("aria-expanded", true);
-    contentClicado.setAttribute("aria-hidden", false);
-  }
-}
